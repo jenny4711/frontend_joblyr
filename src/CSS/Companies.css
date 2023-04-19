@@ -1,0 +1,28 @@
+.Companies{
+  display:flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  width:60rem;
+  height:60rem;
+  padding:1rem;
+  margin-bottom: 5rem;
+  margin-top:5rem;
+  background-color: black;
+  box-shadow: 0 2px 2px 0 #003049, 0 3px 1px -2px #003049, 0 1px 5px 0 #003049;
+
+}
+.Companies-top{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top:5rem;
+  
+}
+h1{
+  color:#ffc300;
+}
+.Companies-input{
+  background-color: #ffc300;
+  width:20rem;
+}
