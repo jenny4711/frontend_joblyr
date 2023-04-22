@@ -50,3 +50,20 @@
 .hide {
   display: none;
 }
+
+@media only screen and(max-width:768px){
+  .Home{
+  width:100vw;
+  height:100vh;
+  justify-content: center;
+  
+}
+.Home-back{
+  
+  width:80vw;
+  height:100vh;
+  margin-left: 5rem;
+}
+
+
+}
