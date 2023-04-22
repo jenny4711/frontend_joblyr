@@ -3,20 +3,21 @@ import "../CSS/JobCard.css";
 import JoblyApi from "../api";
 
 const JobCard = ({ id, title, salary, equity, companyName, dt, setErrMsg }) => {
-  const [err,setErr]=useState(false)
+  const [err,setErr]=useState(true)
   const jobApply = async (e) => {
     let username = dt.username;
  
     try {
       let res = await JoblyApi.applyJob(username, id);
       console.log(res);
-      setErr(true)
+      setErr(false)
       setErrMsg("");
     } catch (e) {
       console.error(e);
-      setErr(false);
-    }
       setErrMsg(e);
+     
+    }
+      
     
     console.log(err,'err');
   };
@@ -50,7 +51,7 @@ const JobCard = ({ id, title, salary, equity, companyName, dt, setErrMsg }) => {
         </h6>
       </div>
       <div className="JobCard-btn">
-        <button onClick={jobApply}>{err === true?'SAVED':'APPLY'}</button>
+        <button onClick={jobApply}>{err === false?'SAVED':'APPLY'}</button>
       </div>
     </div>
   );

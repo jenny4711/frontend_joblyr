@@ -7,3 +7,13 @@ color:black;
   background-color: #ffc300;
 margin:1rem;
 }
+
+.JobDetail-btn{
+  border:none;
+  color:black;
+  background-color: #ffc300;
+  font-weight: bold;
+}
+.JobDetail-btn :hover{
+  font-weight: bolder;
+}
