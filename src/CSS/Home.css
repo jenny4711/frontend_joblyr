@@ -51,13 +51,21 @@
   display: none;
 }
 
-@media screen and(max-width:768px){
+@media (max-width:768px){
   .Home-back{
     
-    width:100%;
+    width:80%;
    margin-left: 1rem;
+   background-color: black;
+   font-size: 15px;
 
-    background-color: red;
+  }
+
+  .Home-border{
+    justify-content: flex-end;
+    text-align: center;
+    width:70%;
+    height: 80%;
   }
   
   }

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import uuid from "react-uuid";
 import useLocalStorage from "./useLocalStorage";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 import { Routes, Route } from "react-router-dom";
 
 import Navb from "./pages/Navb";

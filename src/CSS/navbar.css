@@ -3,7 +3,7 @@
 flex-direction: row;
   background-color: black;
   justify-content: space-between;
-  align-items: center;
+  /* align-items: center; */
   box-shadow: 0 2px 2px 0 #003049, 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
   height:3rem;
   width:100vw;
@@ -35,9 +35,71 @@ span:hover{
 
 
 
-@media only screen and(max-width:768px){
+@media (max-width:768px){
+  .Nav{
+    flex-direction: column;
+  justify-content: center;
+    align-items:flex-start;
+    font-size: 15px;
+    height:8rem;
+ 
+  }
+  .Navb-left{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+height:3rem;
+width:100%;
+   
+  }
+  .bars span{
+    display:none;
+  position:absolute;
+  right:32px;
+  font-size:20px;
+    background-color: #ffc300;
+   
+  }
+
+
+  .Navb-right,.Navb-leftOpen{
+    display:flex;
+    flex-direction:column;
+   height:3rem;
+   width:100%;
+   align-items: center;
+    
+  
+  }
+  .Navb-right a{
+  height:1rem;
+  margin:1px;
+  }
+.Navb-left a{
+  display:none;
+  height:1rem;
+  margin:1px;
+}
+
+.Navb-leftOpen a{
+  display:block;
+  height:1rem;
+  margin:1px;
 
 }
+
+.bars span{
+  display:block;
+}
+
+
+  
+  }
+  
+  
+
+
+
 
 
 

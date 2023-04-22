@@ -64,10 +64,29 @@
   padding:4rem;
   
 }
-@media screen and(max-width:768px){
-.App{
-  width:200%;
-  left:-50%;
+@media (max-width:768px){
+.Login,.Signup{
+  width:90vw;
+  margin-left: 0.5rem;
+}
+
+.Login-form,.Signup-form{
+  width:80vw;
+  display:flex;
+  justify-content: center;
+  text-align: center;
+}
+.Login-form input{
+ 
+  width:55vw;
+ margin-left:-1rem;
+
+}
+.Signup-form input{
+  width:55vw;
+  margin-left:-1rem;
+
 }
 
 }
+
