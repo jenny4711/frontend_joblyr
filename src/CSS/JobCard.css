@@ -31,3 +31,11 @@
   font-weight: bolder;
 
 }
+
+@media(max-width:768px){
+  .JobCard{
+    width:20rem;
+    height:15rem;
+    flex-wrap:nowrap;
+  }
+  }

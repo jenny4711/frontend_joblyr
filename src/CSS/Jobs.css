@@ -9,7 +9,7 @@
   flex-direction: column;
   align-items: center;
   width:70rem;
-  height:70rem;
+  height:170rem;
  padding-top:4rem;
   margin-left:25rem;
   margin-bottom: 4rem;
@@ -32,4 +32,13 @@ h2{
 .Jobs-input{
   width:20rem;
   background-color: #ffc300;
+}
+@media (max-width:768px){
+  .Jobs{
+    margin-left:1rem;
+    width:23rem;
+    height:250rem;
+  
+
+  }
 }

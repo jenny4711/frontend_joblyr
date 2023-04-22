@@ -9,7 +9,7 @@ const Jobs = ({ dt, setErrMsg }) => {
   const [jobs, setJobs] = useState();
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [perPage, setPerpage] = useState(6);
+  const [perPage, setPerpage] = useState(15);
   const [searchOn, setSearchOn] = useState(false);
 
   const searchByTitle = async (e) => {

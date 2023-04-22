@@ -52,12 +52,14 @@
 }
 
 @media (max-width:768px){
+
   .Home-back{
     
     width:80%;
    margin-left: 1rem;
    background-color: black;
    font-size: 15px;
+   padding:1rem;
 
   }
 

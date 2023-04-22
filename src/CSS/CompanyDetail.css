@@ -4,7 +4,7 @@
 }
 .CompanyDetail-list{
   display:flex;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   align-items: center;
   width:70rem; 
@@ -39,4 +39,13 @@
 .companyDetail-h3{
   color:#ffc300;
   text-align: center;
+}
+@media (max-width:768px){
+  .CompanyDetail-list{
+
+    margin-left: 1rem;
+   
+    width:23rem;
+    height:80rem;
+  }
 }

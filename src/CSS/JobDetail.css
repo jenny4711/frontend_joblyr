@@ -17,3 +17,9 @@ margin:1rem;
 .JobDetail-btn :hover{
   font-weight: bolder;
 }
+@media (max-width:768px){
+  .JobDetail{
+    width:20rem;
+    height:9rem;
+  }
+}

@@ -26,3 +26,10 @@ h1{
   background-color: #ffc300;
   width:20rem;
 }
+
+@media (max-width:768px){
+  .Companies{
+    width:23rem;
+    height:70rem;
+  }
+}

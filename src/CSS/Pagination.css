@@ -5,7 +5,7 @@ nav{
 .Pagination-ul{
   display:flex;
   align-items: center;
-margin:1rem;
+ margin:1rem;
   list-style: none;
 
 
@@ -33,4 +33,9 @@ padding:2px;
 }
 .hide{
   display:none;
+}
+@media (max-width:768px){
+.Pagination-ul{
+  font-size: x-small;
+}
 }
