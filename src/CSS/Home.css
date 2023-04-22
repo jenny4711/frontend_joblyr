@@ -51,19 +51,10 @@
   display: none;
 }
 
-@media only screen and(max-width:768px){
-  .Home{
-  width:100vw;
-  height:100vh;
-  justify-content: center;
+@media screen and(max-width:768px){
+  .Home-back{
+    width:200%;
+    left:-50%;
+  }
   
-}
-.Home-back{
-  
-  width:80vw;
-  height:100vh;
-  margin-left: 5rem;
-}
-
-
-}
+  }
