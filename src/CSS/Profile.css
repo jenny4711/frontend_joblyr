@@ -39,3 +39,14 @@ input{
  
 
 }
+@media (max-width:768px){
+  .Profile{
+    width:23rem;
+  }
+  .Profile-form{
+    width:20rem;
+  }
+  input{
+    width:17rem;
+  }
+}
