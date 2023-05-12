@@ -31,8 +31,10 @@ function App() {
   const signUp = async (newData) => {
     try {
       const result = await JoblyApi.signUp(newData);
+      console.log(result,'result')
+      console.log(newData,'newData')
       JoblyApi.token = result;
-
+  
       setToken(result);
       setUserInfo(newData);
       setLog(true);
@@ -45,9 +47,10 @@ function App() {
   };
 
   const logIn = async (userData) => {
+    console.log(userData)
     try {
       const result = await JoblyApi.login(userData);
-
+     
       JoblyApi.token = result;
       setToken(result);
       setErrMsg("");
@@ -68,22 +71,27 @@ function App() {
     setUserInfo(null);
     localStorage.removeItem("token", token);
   };
-  console.log(token);
+  
 
   const getInfo = async () => {
     const decode = jwt_decode(token);
     let { username } = decode;
-    console.log(username);
+ 
     JoblyApi.token = token;
     try {
       let res = await JoblyApi.getInfoUser(username);
       setDt(res);
-      console.log(res);
+     
       return dt;
     } catch (e) {
       console.error(e);
     }
   };
+  useEffect(()=>{
+    logIn()
+    signUp()
+
+  },[])
   useEffect(() => {
     if (token) {
       getInfo();

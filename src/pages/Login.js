@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../CSS/App.css";
 import { useNavigate } from "react-router-dom";
 
-const Login = ({ setData, setLog, token, data,logIn,setToken }) => {
+const Login = ({ setData, setLog, token, data, logIn, setToken }) => {
   const ITEM = {
     username: null,
     password: null,
@@ -19,16 +19,15 @@ const Login = ({ setData, setLog, token, data,logIn,setToken }) => {
       ...formData,
       [name]: value,
     }));
-    console.log(data);
   };
-  const handleSubmit = async(e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setFormData(ITEM);
-    let res=await logIn(formData);
-    if (res.success === true) {
-      console.log(res)
+    let res = await logIn(formData);
+    if (res.success) {
+      console.log(res);
       setLog(true);
-    
+
       navigate("/");
     } else {
       setLog(false);
@@ -39,7 +38,6 @@ const Login = ({ setData, setLog, token, data,logIn,setToken }) => {
 
   return (
     <div
-   
       className="Login-back"
       style={{
         backgroundImage: "url(./img/bkg.png)",
@@ -53,7 +51,6 @@ const Login = ({ setData, setLog, token, data,logIn,setToken }) => {
         <form className="Login-form" onSubmit={handleSubmit}>
           <label>USERNAME</label>
           <input
-        
             type="text"
             name="username"
             value={formData.username}

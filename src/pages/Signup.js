@@ -1,52 +1,40 @@
-import React, { useEffect, useState,useRef } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import uuid from 'react-uuid';
+import uuid from "react-uuid";
 
-const Signup = ({  setLog ,signUp}) => {
+const Signup = ({ setLog, signUp }) => {
   const ITEM = {
     username: "",
     password: "",
     firstName: "",
     lastName: "",
     email: "",
-    
-  
   };
-   
+
   const [formData, setFormData] = useState(ITEM);
   const [item, setItem] = useState(ITEM);
   const navigate = useNavigate();
 
-
-
-  // useEffect(()=>{
-  //   inputRef.current.focus()
-   
-  // })
-
-  const handleChange=async (e)=>{
-    const {name,value}=e.target;
-    setItem({...item,[e.target.name]:e.target.value,});
-    setFormData((formData)=>({
+  const handleChange = async (e) => {
+    const { name, value } = e.target;
+    setItem({ ...item, [e.target.name]: e.target.value });
+    setFormData((formData) => ({
       ...formData,
-      [name]:value,
+      [name]: value,
     }));
-   
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
     setFormData(ITEM);
- let res = await signUp(formData)
-    // setData(formData);
-    console.log(res.success)
-    if (res.success === true) {
+    let res = await signUp(formData);
+
+    if (res.success) {
       setLog(true);
       navigate("/");
     } else {
       setLog(false);
     }
-  }
-
+  };
 
   return (
     <div className="Signup">
@@ -56,22 +44,16 @@ const Signup = ({  setLog ,signUp}) => {
           name="username"
           type="text"
           value={formData.username}
-        
-        
-    
-      onChange={handleChange}
-      placeholder='USERNAME'
-     
+          onChange={handleChange}
+          placeholder="USERNAME"
         />
         <label>PASSWORD</label>
         <input
           name="password"
           type="text"
           value={formData.password}
-         onChange={handleChange}
-         placeholder='PASSWORD'
-        
-       
+          onChange={handleChange}
+          placeholder="PASSWORD"
         />
 
         <label>FIRST NAME</label>
@@ -79,11 +61,8 @@ const Signup = ({  setLog ,signUp}) => {
           name="firstName"
           type="text"
           value={formData.firstName}
-         onChange={handleChange}
-         placeholder='FIRST NAME'
-       
-         
-       
+          onChange={handleChange}
+          placeholder="FIRST NAME"
         />
         <label>LAST NAME</label>
         <input
@@ -91,9 +70,7 @@ const Signup = ({  setLog ,signUp}) => {
           type="text"
           value={formData.lastName}
           onChange={handleChange}
-          placeholder='LAST NAME'
-       
-         
+          placeholder="LAST NAME"
         />
         <label>E-MAIL</label>
         <input
@@ -101,13 +78,8 @@ const Signup = ({  setLog ,signUp}) => {
           type="email"
           value={formData.email}
           onChange={handleChange}
-          placeholder='E-MAIL'
-        
-         
+          placeholder="E-MAIL"
         />
-
-
-  
 
         <button className="Signup-btn">SUBMIT</button>
       </form>

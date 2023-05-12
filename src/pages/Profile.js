@@ -1,33 +1,28 @@
 import React from "react";
 import "../CSS/Profile.css";
-import { Navigate } from 'react-router-dom';
+import { Navigate } from "react-router-dom";
 import JoblyApi from "../api";
 
-const Profile = ({  userInfo, dt, setDt}) => {
-  console.log(dt);
-
+const Profile = ({ userInfo, dt, setDt }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     let { username } = userInfo;
     let defaultDT = {
       firstName: dt.firstName,
       lastName: dt.lastName,
-      email:dt.email,
+      email: dt.email,
       password: dt.password,
     };
-    console.log(defaultDT, "dt");
+
     try {
       let res = await JoblyApi.profile(username, defaultDT);
-      <Navigate to="/"/>
-      console.log("IT has been saved!!!")
-      return {success:true}
-  
-   
+      <Navigate to="/" />;
+      console.log("IT has been saved!!!");
+      return { success: true };
     } catch (e) {
       console.error(e);
     }
     setDt((d) => ({ ...d, password: "" }));
-    console.log(dt);
   };
 
   const handleChange = (e) => {

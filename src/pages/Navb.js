@@ -16,7 +16,7 @@ const Navb = ({ log, logOut, data }) => {
     }
   };
 
-  const showNav=()=>setToggle(t=>t === true ?false:true)
+  const showNav = () => setToggle((t) => (t === true ? false : true));
 
   return (
     <nav className="Nav" key={uuid()}>
