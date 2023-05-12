@@ -21,13 +21,14 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  width:30rem;
+  width:32rem;
   height:30rem;
-  margin-left:65rem;
+  margin-left:30rem;
   margin-bottom: 10rem;
   background-color: black;
   box-shadow: 0 2px 2px 0 #003049, 0 3px 1px -2px #003049, 0 1px 5px 0 #003049;
 }
+
 
 .Login-form,.Signup-form{
   display:flex;
@@ -68,6 +69,10 @@
 .Login,.Signup{
   width:90vw;
   margin-left: 0.5rem;
+}
+.Login{
+  margin-left:1rem;
+  margin-top:6rem;
 }
 
 .Login-form,.Signup-form{
