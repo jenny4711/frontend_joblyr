@@ -1,4 +1,4 @@
-<h1>Title:Jobly React< </h1>
+<h1>Title:Jobly React</h1>
   <h3>Go to Web: https://joblyreact.netlify.app </h3>
    <img width='70%' src="https://github.com/jenny4711/portfolio-site/blob/main/img/projects/jobly.png"/>
   <ul>
